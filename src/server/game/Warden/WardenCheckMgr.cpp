@@ -151,12 +151,12 @@ void WardenCheckMgr::LoadWardenChecks()
 
 void WardenCheckMgr::LoadWardenOverrides()
 {
-    // Check if Warden is enabled by config before loading anything
-    if (!sWorld->getBoolConfig(CONFIG_WARDEN_ENABLED))
-    {
-        sLog->outInfo(LOG_FILTER_WARDEN, ">> Warden disabled, loading check overrides skipped.");
-
-        return;
+     // Check if Warden is enabled by config before loading anything
+     if (!sWorld->getBoolConfig(CONFIG_WARDEN_ENABLED))
+     {
+         sLog->outString(">> Warden disabled, loading check overrides skipped.");
+         sLog->outString();
+         return;
     }
 
     //                                                      0        1
